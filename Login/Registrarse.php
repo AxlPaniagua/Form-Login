@@ -1,5 +1,5 @@
 <?php
-
+    //donde recibe los datos para el registro
     session_start();
 
     include_once('../Config/conexion.php');
