@@ -1,7 +1,7 @@
 <?php //home donde ya estaria logeado
 session_start();
-    if(isset($_SESSION['id']) && isset($_SESSION['nombreUsuario'])){
-
+    if(isset($_SESSION['id']) && isset($_SESSION['nombreUsuario']) && isset($_SESSION['nombreCompleto']) ){
+        $nombreCompleto = $_SESSION['nombreCompleto'];
 ?>
 
 
@@ -16,7 +16,7 @@ session_start();
 <body>
     <h2>Bienvenido</h2>
 
-    
+    <h2>Bienvenido, <?php echo $nombreCompleto; ?></h2>
     <a href="login/CerrarSesion.php">Cerrar Sesion</a>
 </body>
 </html>
