@@ -4,7 +4,6 @@ session_start();
         $nombreCompleto = $_SESSION['nombreCompleto'];
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,12 +11,12 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/styles.css">
-    <title>Home</title>
+    <title>Marketing</title>
 </head>
 <body>
-
-    <h2>Welcome, <?php echo $nombreCompleto; ?></h2>
-    <a href="login/CerrarSesion.php">Cerrar Sesion</a>
+    
+        <h1>Welcome Marketing <?php echo $nombreCompleto;?></h1>
+        <a href="login/CerrarSesion.php">Cerrar Sesion</a>
 </body>
 </html>
 
