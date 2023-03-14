@@ -44,7 +44,7 @@ session_start();
                         echo "<td> " ."<img src='/Form Login/ICONS/neymar.png' style='width:50px' " . $row['id'] . "</td>";
                         
                     }else if($s==2){//if is the rol 2 accounting
-                        echo "<td> " ."<img src='/Form Login/ICONS/cristiano.png' style='width:50px' " . $row['id'] . "</td>";
+                        echo "<td> " ."<img src='/Form Login/ICONS/cris.png' style='width:50px' " . $row['id'] . "</td>";
                         
                     }else if($s==3){//if is the rol 3 marketing
                         echo "<td> " ."<img src='/Form Login/ICONS/kylian.png' style='width:50px' " . $row['id'] . "</td>";
