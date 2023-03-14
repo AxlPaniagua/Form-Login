@@ -35,7 +35,7 @@ session_start();
                     <a class="nav-link" href="#">Logout</a>
                 </li>
                 <li>
-                    <a href="../Login/CerrarSesion.php">Cerrar Sesion</a>
+                    <a href="../Controllers/CerrarSesion.php">Cerrar Sesion</a>
 
                 </li>
             </ul>

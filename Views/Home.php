@@ -17,7 +17,7 @@ session_start();
 <body>
 
     <h2>Welcome, <?php echo $nombreCompleto; ?></h2>
-    <a href="../Login/CerrarSesion.php">Cerrar Sesion</a>
+    <a href="../Controllers/CerrarSesion.php">Cerrar Sesion</a>
 </body>
 </html>
 

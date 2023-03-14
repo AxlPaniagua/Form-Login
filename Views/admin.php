@@ -60,7 +60,7 @@ session_start();
         ?>
 
 
-        <a href="../Login/CerrarSesion.php">Cerrar Sesion</a>
+        <a href="../Controllers/CerrarSesion.php">Cerrar Sesion</a>
     </div>
         
 
