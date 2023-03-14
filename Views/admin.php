@@ -43,8 +43,8 @@ session_start();
                     echo "<tr> ";
                     echo "<td> " . $row['id'] . "</td>";//print id of the table
                         
-                    echo "<td> " . $row['nombreUsuario'] . " </td>";//print the user name
                     echo "<td> " . $row['nombreCompleto'] . " </td>";//print the full name
+                    echo "<td> " . $row['nombreUsuario'] . " </td>";//print the user name
 
                     if($rowb = mysqli_fetch_assoc($resultb)){//this works because are employee
                         echo "<td> " . $rowb['description'] ."</td>";//print the rol
