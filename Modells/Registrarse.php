@@ -25,19 +25,19 @@
 
 
         if(empty($usuario)){//validar si los datos estan vacios 
-            header("location: ../Registro.php?error=El usuario es requerido &$datosUsuario");
+            header("location: ../Views/Registro.php?error=El usuario es requerido &$datosUsuario");
             exit();
         }elseif(empty($nombreCompleto)){
-            header("location: ../Registro.php?error=El nombre completo es requerido&$datosUsuario");
+            header("location: ../Views/Registro.php?error=El nombre completo es requerido&$datosUsuario");
             exit();
         }elseif(empty($contra)){
-            header("location: ../Registro.php?error=La contraseña es requerido&$datosUsuario");
+            header("location: ../Views/Registro.php?error=La contraseña es requerido&$datosUsuario");
             exit();
         }elseif(empty($Rcontra)){
-            header("location: ../Registro.php?error=Repetir la clave es requerido&$datosUsuario");
+            header("location: ../Views/Registro.php?error=Repetir la clave es requerido&$datosUsuario");
             exit();
         }elseif($contra !== $Rcontra){
-            header("location: ../Registro.php?error=La clave no coincide&$datosUsuari");
+            header("location: ../Views/Registro.php?error=La clave no coincide&$datosUsuari");
             exit();
         }else{
             $contra = password_hash($contra, PASSWORD_DEFAULT);
@@ -46,23 +46,23 @@
             $query = $conexion->query($sql);
 
             if(mysqli_num_rows($query) > 0){
-                header("location: ../Registro.php?error=El usuario ya existe");
+                header("location: ../Views/Registro.php?error=El usuario ya existe");
                 exit();
             }else{
                 $sql2 = "INSERT INTO usuarios(nombreUsuario,nombreCompleto,contra) VALUES('$usuario','$nombreCompleto','$contra')";
                 $query2 = $conexion->query($sql2);
 
                 if($query2){
-                    header("location: ../Registro.php?success=Usuario Creado con exito");
+                    header("location: ../Views/Registro.php?success=Usuario Creado con exito");
                     exit();
                 }else{
-                    header("location: ../Registro.php?error=Ocurrio un error");
+                    header("location: ../Views/Registro.php?error=Ocurrio un error");
                     exit();
                 }
             }
         }
     }else{
-        header('location: ../Registro.php');
+        header('location: ../Views/Registro.php');
         exit();
     }
 ?>

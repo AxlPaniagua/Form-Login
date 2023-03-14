@@ -18,10 +18,10 @@
 
 
             if(empty($usuario)){//check if spaces are empty and same in the others
-                header('location: ..login.php?error=El usuario es requerido');
+                header('location: ../Views/login.php?error=El usuario es requerido');
                 exit;
             }elseif(empty($clave)){
-                header('location: ..login.php?error=La clave es requerido');
+                header('location: ../Views/login.php?error=La clave es requerido');
                 exit;
             }else{
                 $sql= "SELECT * FROM usuarios WHERE nombreUsuario = '$usuario'"; //connection to the db usuarios
@@ -46,7 +46,7 @@
 
                             echo"<script>
                                 alert('Bienvenido   $nombreCompleto');
-                                location.href = '../Home.php';
+                                location.href = '../Views/Home.php';
                             </script>";
                             
                     if(password_verify($clave,$contra)){
@@ -59,25 +59,25 @@
                             $rol = $authorizationQ['description'];//declarate rol for use the variable in the row description
                             $_SESSION['rol'] = $rol;
                             if ($id_authorization == 1) {//if the rol if 1 is admin
-                                header('Location:../admin.php');
+                                header('Location:../Views/admin.php');
                             } elseif ($id_authorization == 2) {//if the rol is 2 is accounting 
-                                header('Location:../accounting.php');
+                                header('Location:../Views/accounting.php');
                             } elseif ($id_authorization == 3) {//if the rol is 3 is marketing
-                                header('Location:../marketing.php');
+                                header('Location:../Views/marketing.php');
                             }
 
 
                         }
                     }
                         }else{
-                            header('Location:../login.php?error=Usuario o clave incorrecta');
+                            header('Location:../Views/login.php?error=Usuario o clave incorrecta');
                         }
                     }else{
-                        header('Location:../login.php?error=Usuario o clave incorrecta');
+                        header('Location:../Views/login.php?error=Usuario o clave incorrecta');
                     }
                     
                 }else{
-                    header('Location:../login.php?error=Usuario o clave incorrecta');
+                    header('Location:../Views/login.php?error=Usuario o clave incorrecta');
                 }
             }
         }
