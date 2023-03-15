@@ -68,5 +68,5 @@ session_start();
 </html>
 
 <?php } else{
-    header('location: ../login.php');
+    header('location: ../Views/login.php');
     }?>
